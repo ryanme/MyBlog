@@ -1,0 +1,43 @@
+    /* 左侧栏文章列表 */
+
+body {
+ font-family: "Microsoft Yahei", Helvetica, arial, sans-serif ;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom: 10px;
+  background-color: lightgray;
+color: #516272;}
+
+@media screen and (min-width: 960px) {
+    div#bloglist {
+        width: 960px;
+        padding: 5px;
+        margin: 15px auto auto auto;
+    }
+}
+
+#bloglist h2 { border-bottom: #474645 2px solid; margin: 0 8px 20px 8px; height: 26px; overflow: hidden; line-height: 28px; font-size: 16px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; letter-spacing: 2px }
+#bloglist h2 p { background: #474645; width: 180px; color: #fff; text-align: center; box-shadow: #999 4px 5px 1px; }
+#bloglist h2 p span { color: #38b3d4; }
+#page{ text-align: center }
+
+.blogs { margin: 0 0 10px 0; position: relative; background-color: white; }
+.blogs h3 { font-size: 14px; font-weight: bold; transition: all .5s }
+.blogs h3 a { color: #474645; }
+.blogs h3:hover { text-decoration: underline }
+.blogs figure { float: left; width: 100px; height: 100px; overflow: hidden; margin-top: 10px; }
+.blogs figure img { width: 100px; height: 100px; margin: auto; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+.blogs figure:hover img { -moz-transform: scale(1.1); -webkit-transform: scale(1.1); -o-transform: scale(1.1); -ms-transform: scale(1.1); }
+.blogs ul { float: right; line-height: 20px; width: 72%; color: #474645; }
+.blogs ul:hover { cursor: pointer; }
+.autor { clear: both; margin: 10px 0 0 0; display: inline-block; line-height: 26px; height: 26px; color: #838383; background: #f6f6f6; width: 100% }
+.autor span { margin: 0 10px; }
+.autor span a { color: #759b08; }
+a.readmore { background: #e41635; color: #fff; padding: 5px 10px; float: right; margin: 20px 10px 0 0 }
+/*.blogs::before { content: ""; width: 10px; height: 10px; border-radius: 50%; position: absolute; background: #cac1c1; border: 2px solid #fff; left: -27px; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }*/
+.blogs:hover::before { background: #474645 }
+.dateview { position: absolute; right: 0px; top: 0px; z-index: 1; color: #ff8900; margin-right: 10px; margin-top: 10px;}
+.blogs:hover::after { opacity: 1 }
+ul.shortcontent p { margin-top: 10px; margin-right: 10px; }
+div.noarticle p { text-align: center; margin: auto; font-size: 20px; color: #4E5465; }
+a.title  {margin-left: 15px; margin-top: 10px; font-size: 15px;}

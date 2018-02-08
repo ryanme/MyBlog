@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block js %}
+ {{layui}}
+{% endblock %}
+{% block content %}
+<!--<table class="layui-hide" id="test"></table>-->
+
+<table class="layui-hide" id="ticket"></table>
+<script src="js/layui.js" charset="utf-8"></script>
+<script>
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#ticket',
+            url:'/ticketinfo?from_station=南京&to_station=乌鲁木齐&time=2018-01-16',
+            cellMinWidth: 80, //全局定义常规单元格的最小宽度，layui 2.2.1 新增,
+            cols: [[
+                {field:'num', title:'车次', align: 'center'},
+                {field:'local', title:'上车点/下车点', align: 'center'},
+                {field:'time', title:'发车时间/到达时间', align: 'center'},
+                {field:'needtime', title:'耗时', align: 'center'},
+                {field:'se',title:'列车起点/列车终点', align: 'center'},
+                {field:'tdz',title:'特等座', align: 'center'},
+                {field:'ydz',title:'一等座', align: 'center'},
+                {field:'edz',title:'二等座', align: 'center'},
+                {field:'gjrw',title:'高级软卧', align: 'center'},
+                {field:'rw',title:'软卧', align: 'center'},
+                {field:'dw',title:'动卧',align: 'center'},
+                {field:'yw',title:'硬卧', align: 'center'},
+                {field:'rz',title:'软座', align: 'center'},
+                {field:'yz',title:'硬座', align: 'center'},
+                {field:'wz',title:'无座', align: 'center'},
+            ]]
+            ,page: false
+        });
+    });
+</script>
+{% endblock %}
+

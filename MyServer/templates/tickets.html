@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block js %}
+  <meta charset="utf-8">
+  <title>layui</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/layui.css"  media="all">
+{% endblock %}
+{% block content %}
+
+<div id="app">
+    <form @submit.prevent="submit">
+        <div class="field">
+            起点：<input type="text" v-model="inputtext.startlocation">
+            终点：<input type="text" v-model="inputtext.endlocation">
+            时间：<input type="text" v-model="inputtext.time">
+            <input type="submit" value="提交" formmethod="post">
+        </div>
+    </form>
+</div>
+<br>
+<table class="layui-hide" id="test"></table>
+
+<script src="js/layui.js" charset="utf-8"></script>
+{% endblock %}

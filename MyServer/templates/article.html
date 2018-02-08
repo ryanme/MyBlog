@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block css %}
+   <link rel="stylesheet" href="/css/style.css"  media="all">
+   <script src="/js/jquery-1.9.1.min.js" charset="utf-8"></script>
+   <script src="/js/article.js" charset="utf-8"></script>
+{% endblock %}
+{% block content %}
+   <div id="content">
+      {{article_content}}
+   </div>
+{% endblock %}
